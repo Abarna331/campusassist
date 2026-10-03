@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Campus Assist</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #eef2ff, #f5f3ff, #ecfeff);
+            min-height: 100vh;
+            color: #1e293b;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            padding: 30px 50px;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 22px;
+        }
+
+        .course {
+            background: white;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+            border-left: 5px solid #6366f1;
+            transition: 0.3s;
+        }
+
+        .course:hover {
+            transform: translateY(-6px);
+        }
+
+        .course h2 {
+            color: #4338ca;
+        }
+
+        .course p {
+            color: #64748b;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 11px 22px;
+            background: #4f46e5;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>📚 My Courses</h1>
+        <p>Campus Assist • Student Academic Portal</p>
+    </div>
+
+    <div class="container">
+
+        <div class="course-grid">
+
+            <div class="course">
+                <h2>💻 Web Development</h2>
+                <p>Learn HTML, CSS, JavaScript and web technologies.</p>
+                <p><strong>Credits:</strong> 4</p>
+            </div>
+
+            <div class="course">
+                <h2>🐍 Python Programming</h2>
+                <p>Learn Python programming and application development.</p>
+                <p><strong>Credits:</strong> 4</p>
+            </div>
+
+            <div class="course">
+                <h2>🗄️ Database Management</h2>
+                <p>Learn databases, SQL and data management.</p>
+                <p><strong>Credits:</strong> 3</p>
+            </div>
+
+            <div class="course">
+                <h2>🤖 Artificial Intelligence</h2>
+                <p>Introduction to AI, machine learning and intelligent systems.</p>
+                <p><strong>Credits:</strong> 4</p>
+            </div>
+
+        </div>
+
+        <a href="/student-dashboard" class="back">← Back to Dashboard</a>
+
+    </div>
+
+</body>
+</html>

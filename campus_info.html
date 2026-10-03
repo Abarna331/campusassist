@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Assist - Campus Information</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #eef2ff, #f5f3ff, #ecfeff);
+            min-height: 100vh;
+            color: #1e293b;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 34px;
+        }
+
+        .header p {
+            margin-top: 10px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+            border: 1px solid #e2e8f0;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(79, 70, 229, 0.18);
+        }
+
+        .icon {
+            font-size: 45px;
+        }
+
+        .card h2 {
+            color: #312e81;
+        }
+
+        .card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .back {
+            display: block;
+            width: fit-content;
+            margin: 35px auto;
+            padding: 12px 22px;
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .back:hover {
+            transform: scale(1.05);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 25px;
+            color: #64748b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>🏫 Campus Information</h1>
+        <p>Everything you need to know about our campus</p>
+    </div>
+
+    <div class="container">
+
+        <div class="info-grid">
+
+            <div class="card">
+                <div class="icon">📍</div>
+                <h2>Campus Location</h2>
+                <p>Campus Assist University, Main Campus, Tamil Nadu.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📚</div>
+                <h2>Library</h2>
+                <p>Open Monday to Saturday from 9:00 AM to 6:00 PM.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">💻</div>
+                <h2>Computer Lab</h2>
+                <p>Modern computer facilities available for students and faculty.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🏥</div>
+                <h2>Medical Center</h2>
+                <p>Basic medical support available during campus hours.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🍴</div>
+                <h2>Campus Canteen</h2>
+                <p>Fresh and affordable food available throughout the day.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🚌</div>
+                <h2>Transport</h2>
+                <p>Campus bus services are available on selected routes.</p>
+            </div>
+
+        </div>
+
+        <a href="/" class="back">← Back to Home</a>
+
+    </div>
+
+    <div class="footer">
+        © 2026 Campus Assist • Smart Campus, Smarter Students
+    </div>
+
+</body>
+</html>

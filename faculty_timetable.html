@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Timetable - Campus Assist</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #141e30, #243b55, #00c6ff);
+            min-height: 100vh;
+            color: white;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .table-box {
+            overflow-x: auto;
+            background: rgba(255, 255, 255, 0.12);
+            padding: 15px;
+            border-radius: 18px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            color: #222;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        th {
+            background: #243b55;
+            color: white;
+            padding: 15px;
+        }
+
+        td {
+            padding: 14px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background: #f2f7ff;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 22px;
+            background: white;
+            color: #243b55;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📅 Faculty Timetable</h1>
+
+    <div class="table-box">
+
+        <table>
+
+            <tr>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Subject</th>
+            </tr>
+
+            {% for item in timetable %}
+
+            <tr>
+                <td>{{ item['day'] }}</td>
+                <td>{{ item['time'] }}</td>
+                <td>{{ item['subject'] }}</td>
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+    <a href="/faculty-dashboard" class="back-btn">
+        ← Back to Faculty Dashboard
+    </a>
+
+</div>
+
+</body>
+</html>

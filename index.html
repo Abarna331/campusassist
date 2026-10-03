@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Assist</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(135deg, #141e30, #243b55, #6a11cb);
+            min-height: 100vh;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 70px 20px 40px;
+        }
+
+        .logo {
+            font-size: 75px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 10px 0;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #d9f7ff;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+        }
+
+        .faculty {
+            background: linear-gradient(90deg, #11998e, #38ef7d);
+        }
+
+        .campus {
+            background: linear-gradient(90deg, #f7971e, #ffd200);
+            color: #222;
+        }
+
+        .section {
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 35px 25px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.10);
+            border-radius: 25px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .section h2 {
+            font-size: 30px;
+            margin-top: 0;
+        }
+
+        .section p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.7;
+            color: #e4f8ff;
+        }
+
+        .features {
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto 60px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-card {
+            padding: 25px 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .feature-icon {
+            font-size: 45px;
+        }
+
+        .feature-card h3 {
+            margin: 12px 0 8px;
+        }
+
+        .feature-card p {
+            color: #d9f7ff;
+            line-height: 1.5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: rgba(0,0,0,0.25);
+            color: #d9f7ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero">
+
+        <div class="logo">🎓</div>
+
+        <h1>Welcome to Campus Assist</h1>
+
+        <div class="subtitle">
+            Your Smart Campus Assistant
+        </div>
+
+        <div class="buttons">
+
+            <a href="/student-login" class="btn">
+                👨‍🎓 Student Login
+            </a>
+
+            <a href="/faculty-login" class="btn faculty">
+                👨‍🏫 Faculty Login
+            </a>
+
+            <a href="/campus-info" class="btn campus">
+                🏫 Campus Information
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="section">
+
+        <h2>🌟 About Campus Assist</h2>
+
+        <p>
+            Campus Assist is a smart campus management system designed
+            to make student and faculty activities easier.
+            Students can access their courses, timetable, assignments,
+            announcements and profile information in one place.
+            Faculty members can manage student information, courses,
+            assignments, announcements and timetable details.
+        </p>
+
+    </div>
+
+
+    <div class="features">
+
+        <div class="feature-card">
+            <div class="feature-icon">📚</div>
+            <h3>Courses</h3>
+            <p>
+                Easily view student and faculty course information.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">📅</div>
+            <h3>Timetable</h3>
+            <p>
+                Check weekly class schedules quickly.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">📝</div>
+            <h3>Assignments</h3>
+            <p>
+                Keep track of assignments and due dates.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">📢</div>
+            <h3>Announcements</h3>
+            <p>
+                Stay updated with important campus announcements.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">👥</div>
+            <h3>Student Management</h3>
+            <p>
+                Faculty can view student details easily.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🏫</div>
+            <h3>Campus Information</h3>
+            <p>
+                Find useful information about campus facilities.
+            </p>
+        </div>
+
+    </div>
+
+
+    <footer>
+        © 2026 Campus Assist | Smart Campus Management System
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile - Campus Assist</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2, #00c6ff);
+            color: white;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 60px auto;
+            padding: 40px 30px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 25px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .avatar {
+            font-size: 75px;
+        }
+
+        h1 {
+            margin: 10px 0;
+        }
+
+        .subtitle {
+            color: #d9f7ff;
+            margin-bottom: 25px;
+        }
+
+        .info {
+            text-align: left;
+            background: rgba(0,0,0,0.18);
+            padding: 20px;
+            border-radius: 18px;
+        }
+
+        .info p {
+            padding: 10px;
+            margin: 5px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .info p:last-child {
+            border-bottom: none;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #9ff3ff;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            border-radius: 25px;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: linear-gradient(90deg, #764ba2, #667eea);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="avatar">👨‍🎓</div>
+
+        <h1>My Profile</h1>
+
+        <div class="subtitle">
+            Student Information
+        </div>
+
+        <div class="info">
+
+            <p>
+                <span class="label">Student ID:</span>
+                {{ student['student_id'] }}
+            </p>
+
+            <p>
+                <span class="label">Name:</span>
+                {{ student['name'] }}
+            </p>
+
+            <p>
+                <span class="label">Department:</span>
+                {{ student['department'] }}
+            </p>
+
+            <p>
+                <span class="label">Year:</span>
+                {{ student['year'] }}
+            </p>
+
+            <p>
+                <span class="label">Email:</span>
+                {{ student['email'] }}
+            </p>
+
+            <p>
+                <span class="label">Academic Status:</span>
+                Active Student
+            </p>
+
+        </div>
+
+        <a href="/student-dashboard" class="btn">
+            ⬅ Back to Dashboard
+        </a>
+
+    </div>
+
+</body>
+</html>

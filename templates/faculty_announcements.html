@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Announcements - Campus Assist</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #141e30, #243b55, #00c6ff);
+            min-height: 100vh;
+            color: white;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-card {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        .form-card h2 {
+            margin-top: 0;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 13px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 10px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 10px;
+            background: white;
+            color: #243b55;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #8ff3ff;
+        }
+
+        .announcement-card {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 22px;
+            margin: 15px 0;
+            border-radius: 18px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .announcement-card h2 {
+            margin-top: 0;
+            color: #8ff3ff;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 22px;
+            background: white;
+            color: #243b55;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📢 Faculty Announcements</h1>
+
+    <div class="form-card">
+
+        <h2>➕ Add New Announcement</h2>
+
+        <form method="POST" action="/add-announcement">
+
+            <input
+                type="text"
+                name="title"
+                placeholder="Announcement Title"
+                required
+            >
+
+            <input
+                type="text"
+                name="date"
+                placeholder="Date (Example: 30 October 2026)"
+                required
+            >
+
+            <textarea
+                name="description"
+                placeholder="Announcement Description"
+                required
+            ></textarea>
+
+            <button type="submit">
+                ➕ Add Announcement
+            </button>
+
+        </form>
+
+    </div>
+
+    <h2>📋 Existing Announcements</h2>
+
+    {% for announcement in announcements %}
+
+    <div class="announcement-card">
+
+        <h2>{{ announcement['title'] }}</h2>
+
+        <p>
+            <strong>📅 Date:</strong>
+            {{ announcement['date'] }}
+        </p>
+
+        <p>
+            {{ announcement['description'] }}
+        </p>
+
+    </div>
+
+    {% endfor %}
+
+    <a href="/faculty-dashboard" class="back-btn">
+        ← Back to Faculty Dashboard
+    </a>
+
+</div>
+
+</body>
+</html>

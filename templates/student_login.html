@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login - Campus Assist</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2, #00c6ff);
+        }
+
+        .login-box {
+            width: 90%;
+            max-width: 420px;
+            padding: 40px 30px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+        }
+
+        .icon {
+            font-size: 60px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        p {
+            color: #666;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #667eea;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .error {
+            color: #e63946;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 20px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <div class="icon">👨‍🎓</div>
+
+        <h1>Student Login</h1>
+        <p>Login to access Campus Assist</p>
+
+        <input type="text" id="studentId" placeholder="Enter Student ID">
+
+        <input type="password" id="password" placeholder="Enter Password">
+
+        <button onclick="loginStudent()">🔐 Login</button>
+
+        <div id="errorMessage" class="error"></div>
+
+        <a href="/" class="back">⬅ Back to Home</a>
+
+    </div>
+
+    <script>
+        function loginStudent() {
+
+            const studentId = document.getElementById("studentId").value;
+            const password = document.getElementById("password").value;
+            const errorMessage = document.getElementById("errorMessage");
+
+            if (studentId === "STU001" && password === "1234") {
+
+                window.location.href = "/student-dashboard";
+
+            } else {
+
+                errorMessage.textContent =
+                    "❌ Invalid Student ID or Password";
+            }
+        }
+    </script>
+
+</body>
+</html>

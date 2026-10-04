@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Assist - Students</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #eef2ff, #f5f3ff, #ecfeff);
+            min-height: 100vh;
+            color: #1e293b;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #7c3aed, #4f46e5);
+            color: white;
+            padding: 35px 20px;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 34px;
+        }
+
+        .header p {
+            margin-top: 8px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        .student-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 22px;
+        }
+
+        .student-card {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+            border: 1px solid #e2e8f0;
+            transition: 0.3s;
+        }
+
+        .student-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 30px rgba(124, 58, 237, 0.18);
+        }
+
+        .avatar {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #7c3aed, #4f46e5);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .student-card h2 {
+            margin: 5px 0;
+            color: #312e81;
+        }
+
+        .student-card p {
+            margin: 8px 0;
+            color: #64748b;
+        }
+
+        .status {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 7px 12px;
+            border-radius: 20px;
+            background: #dcfce7;
+            color: #166534;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .back {
+            display: block;
+            width: fit-content;
+            margin: 35px auto;
+            padding: 12px 22px;
+            background: linear-gradient(135deg, #7c3aed, #4f46e5);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .back:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>👥 Students</h1>
+        <p>View student information</p>
+    </div>
+
+    <div class="container">
+
+        <div class="student-grid">
+
+            <div class="student-card">
+                <div class="avatar">👩</div>
+                <h2>Ananya</h2>
+                <p><strong>Student ID:</strong> STU001</p>
+                <p><strong>Department:</strong> Computer Science</p>
+                <p><strong>Year:</strong> 2nd Year</p>
+                <span class="status">Active</span>
+            </div>
+
+            <div class="student-card">
+                <div class="avatar">👨</div>
+                <h2>Arun</h2>
+                <p><strong>Student ID:</strong> STU002</p>
+                <p><strong>Department:</strong> Computer Science</p>
+                <p><strong>Year:</strong> 2nd Year</p>
+                <span class="status">Active</span>
+            </div>
+
+            <div class="student-card">
+                <div class="avatar">👩</div>
+                <h2>Divya</h2>
+                <p><strong>Student ID:</strong> STU003</p>
+                <p><strong>Department:</strong> Information Technology</p>
+                <p><strong>Year:</strong> 2nd Year</p>
+                <span class="status">Active</span>
+            </div>
+
+            <div class="student-card">
+                <div class="avatar">👨</div>
+                <h2>Karthik</h2>
+                <p><strong>Student ID:</strong> STU004</p>
+                <p><strong>Department:</strong> Information Technology</p>
+                <p><strong>Year:</strong> 3rd Year</p>
+                <span class="status">Active</span>
+            </div>
+
+        </div>
+
+        <a href="/faculty-dashboard" class="back">
+            ← Back to Faculty Dashboard
+        </a>
+
+    </div>
+
+</body>
+</html>
